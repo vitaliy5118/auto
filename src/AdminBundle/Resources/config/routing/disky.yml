@@ -1,0 +1,24 @@
+disky_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Disky:index" }
+    methods:  GET
+
+disky_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Disky:show" }
+    methods:  GET
+
+disky_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:Disky:new" }
+    methods:  [GET, POST]
+
+disky_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:Disky:edit" }
+    methods:  [GET, POST]
+
+disky_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:Disky:delete" }
+    methods:  DELETE

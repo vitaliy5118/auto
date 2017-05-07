@@ -1,0 +1,29 @@
+admin_disky:
+    resource: "@AdminBundle/Resources/config/routing/disky.yml"
+    prefix:   /disky
+admin_spare:
+    resource: "@AdminBundle/Resources/config/routing/spare.yml"
+    prefix:   /spares
+admin_category:
+    resource: "@AdminBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+admin_model:
+    resource: "@AdminBundle/Resources/config/routing/model.yml"
+    prefix:   /model
+admin_brand:
+    resource: "@AdminBundle/Resources/config/routing/brand.yml"
+    prefix:   /brand
+
+homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Admin:index }
+#spares_catalog:
+#    path:     /spares/
+#    defaults: { _controller: AdminBundle:Admin:SparesCatalog}
+tire_catalog:
+    path:     /tire/
+    defaults: { _controller: AdminBundle:Admin:TireCatalog}
+disk_catalog:
+    path:     /disk/
+    defaults: { _controller: AdminBundle:Admin:DiskCatalog }
+

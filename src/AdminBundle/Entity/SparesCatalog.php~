@@ -1,0 +1,32 @@
+<?php
+
+namespace AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="spares_catalog")
+ */
+class SparesCatalog {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer", options={"collate":"utf8_general_ci"})
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=50, options={"collate":"utf8_general_ci"})
+     */
+    private $spare;
+    
+    /**
+     * Many Spares have One Brand
+     * @ORM\ManyToOne(targetEntity="category")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id") 
+     */
+    private $category;
+
+}

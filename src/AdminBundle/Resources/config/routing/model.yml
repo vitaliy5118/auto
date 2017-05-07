@@ -1,0 +1,24 @@
+model_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Model:index" }
+    methods:  GET
+
+model_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Model:show" }
+    methods:  GET
+
+model_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:Model:new" }
+    methods:  [GET, POST]
+
+model_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:Model:edit" }
+    methods:  [GET, POST]
+
+model_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:Model:delete" }
+    methods:  DELETE

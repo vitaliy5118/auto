@@ -1,0 +1,25 @@
+<?php
+
+namespace AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="category")
+ */
+class Category {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer", options={"collate":"utf8_general_ci"})
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=50, options={"collate":"utf8_general_ci"})
+     */
+    private $category;
+
+}

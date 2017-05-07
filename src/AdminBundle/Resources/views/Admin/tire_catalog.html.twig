@@ -1,0 +1,32 @@
+{# src/AdminBundle/Resources/views/Page/index.html.twig #}
+{% extends 'AdminBundle::layout.html.twig' %}
+
+{% block custom_stylesheets %}
+
+{% endblock %}
+
+{% block body %}
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Каталог {{file}}</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+
+    <form action="{{ oneup_uploader_endpoint('gallery') }}" class="dropzone" style="width:200px; height:200px; border:4px dashed black">
+</form>
+
+               
+
+    {% endblock %}
+
+
+    {%block custom_scripts %}
+        
+    <script src="{{ asset('../js/dropzone.js')}}"></script>
+
+
+    {%endblock%}
+

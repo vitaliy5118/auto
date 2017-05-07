@@ -1,0 +1,45 @@
+{% extends 'AdminBase.html.twig' %}
+
+{% block body %}
+    <h1>Diskies list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Size</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Complect</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for disky in diskies %}
+            <tr>
+                <td><a href="{{ path('disky_show', { 'id': disky.id }) }}">{{ disky.id }}</a></td>
+                <td>{{ disky.size }}</td>
+                <td>{{ disky.model }}</td>
+                <td>{{ disky.price }}</td>
+                <td>{{ disky.complect }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('disky_show', { 'id': disky.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('disky_edit', { 'id': disky.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('disky_new') }}">Create a new disky</a>
+        </li>
+    </ul>
+{% endblock %}

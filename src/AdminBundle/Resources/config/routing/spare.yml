@@ -1,0 +1,24 @@
+spare_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Spare:index" }
+    methods:  GET
+
+spare_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Spare:show" }
+    methods:  GET
+
+spare_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:Spare:new" }
+    methods:  [GET, POST]
+
+spare_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:Spare:edit" }
+    methods:  [GET, POST]
+
+spare_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:Spare:delete" }
+    methods:  DELETE

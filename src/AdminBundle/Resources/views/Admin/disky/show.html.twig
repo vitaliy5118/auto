@@ -1,0 +1,44 @@
+{% extends 'AdminBase.html.twig' %}
+
+{% block body %}
+    <h1>Disky</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ disky.id }}</td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td>{{ disky.size }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ disky.model }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ disky.price }}</td>
+            </tr>
+            <tr>
+                <th>Complect</th>
+                <td>{{ disky.complect }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('disky_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('disky_edit', { 'id': disky.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
